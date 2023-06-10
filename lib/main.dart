@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_call_app/pages/call_page.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -66,6 +67,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 });
               },
             ),
+            ElevatedButton(
+                onPressed: () {
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => LoginPage()),
+                  // );
+                },
+                child: Text('Login')),
           ],
         ),
       ),
